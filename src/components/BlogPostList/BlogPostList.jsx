@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import css from "./BlogPostList.module.css";
-import TextSnippet from "../../utils/textSnippet";
+import SnippetForText from "../../utils/SnippetForText";
 const BlogPostList = ({posts}) => {
   return (
     <ul className={css.postsList}>
@@ -20,10 +20,10 @@ const BlogPostList = ({posts}) => {
                 <div className={css.postDetails}>
                   <p className={css.postDate}>wednesday 12, march 2024</p>
                   <p className={css.postTitle}>
-                    {post.title && <TextSnippet text={post.title} />}
+                    {post.title && <SnippetForText text={post.title} />}
                   </p>
                   <p className={css.postBody}>
-                    {post.body && <TextSnippet text={post.body} />}
+                    {post.body && <SnippetForText text={post.body} />}
                   </p>
                 </div>
               </Link>
