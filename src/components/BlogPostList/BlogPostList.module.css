@@ -30,3 +30,10 @@
   margin-top: 20px;
   margin-bottom: 8px;
 }
+.postBody {
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.05em;
+  color: #000;
+  opacity: 0.5;
+}
