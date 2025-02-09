@@ -1,0 +1,35 @@
+.dateCont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.postDate {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  color: #000;
+  opacity: 0.6;
+}
+.userCont {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 99px;
+  padding: 5px 8px 5px 5px;
+}
+.userImg {
+  border-radius: 66px;
+  width: 24px;
+  height: 24px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.userName {
+  font-weight: 500;
+font-size: 14px;
+letter-spacing: -0.05em;
+color: #000;
+}

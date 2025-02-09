@@ -1,32 +1,16 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color: #fcf9f9;
-  background-color: #1c2225;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #fcf9f9;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #ecd979;
+* {
+  box-sizing: border-box;
 }
 
 body {
-  margin: 16px;
-  /* display: flex; */
+  background-image:  url('./assets/Ellipse2.png'), url('./assets/Ellipse3.png');
+  background-position: top left, top right;
+  background-size: 35%, 30%;
+  background-repeat: no-repeat, no-repeat;
+  font-family: Inter;
+  margin: 0;
+  margin-bottom: 130px;
   min-width: 320px;
-  /* max-width: 100%; */
-  /* min-height: 100vh; */
 }
 
 h1 {
@@ -34,7 +18,9 @@ h1 {
   line-height: 1.1;
 }
 
-
+a{
+  text-decoration: none;
+}
 
 h1,
 h2,

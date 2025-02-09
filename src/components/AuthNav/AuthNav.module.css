@@ -1,0 +1,31 @@
+.authCont {
+  width: 237px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+.login {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  padding: 12px 24px;
+  width: 114px;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.05em;
+  text-align: center;
+  color: #000;
+}
+.register {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  padding: 12px 24px;
+  width: 114px;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: -0.05em;
+  text-align: center;
+  background: #04aa00;
+  color: #fff;
+}

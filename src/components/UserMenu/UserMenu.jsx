@@ -1,20 +1,20 @@
-import { useDispatch, useSelector } from "react-redux";
-import { selectUser } from "../../redux/auth/selectors";
-import { logout } from "../../redux/auth/operations";
-import css from '../RegistrationForm/RegistrationForm.module.css'
+import { useNavigate } from 'react-router-dom';
+import css from './UserMenu.module.css'
 
 const UserMenu = () => {
-  const dispatch = useDispatch();
-  const user = useSelector(selectUser);
+  const navigate = useNavigate();
   return (
-    <div style={{display: "flex", alignItems: "center", gap: 8}}>
-      <h3>Welcome {user.name}!</h3>
+    <div>
       <button
         type="button"
-        className={css.btnForm}
-        onClick={() => dispatch(logout())}
+        className={css.logout}
+        onClick={() => {
+          window.location.reload();
+          localStorage.setItem("userAuth", false);
+          navigate("/blog");
+        }}
       >
-        Logout
+        Log out
       </button>
     </div>
   );

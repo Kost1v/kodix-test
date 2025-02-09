@@ -2,14 +2,26 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 16px;
-  width: 400px;
-  padding: 20px;
+  gap: 24px;
+  padding: 32px;
+}
+.title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.41667;
+  color: #202020;
+}
+.nameWrapper {
+  display: flex;
+  gap: 24px;
 }
 .label {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 12px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #202020;
 }
 
 .errorMessage {
@@ -18,44 +30,82 @@
   font-weight: 600;
 }
 
-.btnForm {
-  align-items: center;
-  justify-content: center;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: -0.04em;
-  text-transform: uppercase;
-  color: #fcf9f9;
-  border-radius: 15px;
-  padding: 14px 36px;
-  max-width: 154px;
-  height: 49px;
-  color: #fcf9f9;
-  border: 1px solid rgba(252, 249, 249, 0.1);
+.inputForm {
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  width: 394px;
+  height: 48px;
+  padding-left: 16px;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+}
+.inputFormName {
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  width: 185px;
+  height: 48px;
+  padding-left: 16px;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+}
+
+.inputForm::placeholder,
+.inputFormName::placeholder {
+  color: #484848;
+}
+.passCont {
+  position: relative;
+}
+.showPass {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  /* right: 12px;
+  top: 50%;
+  */
+  border: none;
+  cursor: pointer;
   background-color: transparent;
-  transition: border 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btnForm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 24px;
+  padding-right: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  background: #04aa00;
+  border-radius: 4px;
+  border: none;
+  width: 394px;
+  height: 48px;
+  outline: none;
   cursor: pointer;
 }
-.btnForm:hover,
-.btnForm:focus,
-.btnForm:focus-visible {
-  border: 1px solid #ecd979;
-}
-
-.inputForm {
-  border: 1px solid rgba(252, 249, 249, 0.1);
+.forgotPass {
   font-weight: 400;
-  font-size: 16px;
-  letter-spacing: -0.02em;
-  color: rgba(252, 249, 249, 0.5);
-  border-radius: 15px;
-  padding: 14px 16px;
-  max-width: 508px;
-  background-color: transparent;
-  transition: border 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 14px;
+  color: #04aa00;
+  margin-bottom: 12px;
 }
-
-.inputForm:hover,
-.inputForm:focus {
-  border: 1px solid rgba(252, 249, 249, 0.6);
+.haveAcc {
+  margin-top: 24px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #202020;
+}
+.link {
+  background-color: transparent;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  color: #04aa00;
+  cursor: pointer;
 }

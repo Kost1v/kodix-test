@@ -1,0 +1,36 @@
+.postsList {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  gap: 20px;
+  margin: 20px;
+}
+.post {
+  width: 246px;
+  height: 268px;
+}
+.postDate {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  color: #000;
+  opacity: 0.3;
+  margin-top: 20px;
+}
+.postTitle {
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: -0.05em;
+  color: #000;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+.postBody {
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.05em;
+  color: #000;
+  opacity: 0.5;
+}

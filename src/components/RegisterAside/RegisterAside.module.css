@@ -1,0 +1,43 @@
+.wrapper {
+  padding: 32px;
+  background-color: black;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+.title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.41667;
+  color: #fff;
+  margin-bottom: 24px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.item {
+  display: flex;
+  gap: 8px;
+}
+.titleList {
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 7px;
+}
+.textList {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71429;
+  color: #484848;
+}
+.contact {
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  margin-top: 61px;
+}
+.number {
+  color: #1fff1a;
+}

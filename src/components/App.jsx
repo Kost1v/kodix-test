@@ -1,55 +1,38 @@
-import { lazy, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { refreshUser } from "../redux/auth/operations";
-import { selectIsRefreshing } from "../redux/auth/selectors";
+import { lazy } from "react";
 
 import { Route, Routes } from "react-router-dom";
-import RestrictedRoute from "./RectrictedRoute";
-import PrivateRoute from "./PrivateRoute";
 
 import Layout from "./Layout/Layout";
-import Loader from "./Loader/Loader";
 
-const HomePage = lazy(() => import("../pages/home/HomePage"));
+const HomePage = lazy(() => import("../pages/HomePage/HomePage"));
 const RegistrationPage = lazy(() =>
-  import("../pages/registration/RegistrationPage")
+  import("../pages/RegistrationPage/RegistrationPage")
 );
-const LoginPage = lazy(() => import("../pages/login/LoginPage"));
-const ContactsPage = lazy(() => import("../pages/contacts/ContactsPage"));
+const LoginPage = lazy(() => import("../pages/LoginPage/LoginPage"));
 const NotFoundPage = lazy(() => import("../pages/NotFoundPage/NotFoundPage"));
 import css from "./App.module.css";
-
+import FeaturePage from "../pages/FeaturePage/FeaturePage";
+import TestimonialsPage from "../pages/TestimonialsPage/TestimonialsPage";
+import BlogPage from "../pages/BlogPage/BlogPage";
+import BlogPostPage from "../pages/BlogPostPage/BlogPostPage";
+import PrivateRoute from "./PrivateRoute";
 
 const App = () => {
-  const dispatch = useDispatch();
-  const IsRefreshing = useSelector(selectIsRefreshing);
-  
-  useEffect(() => {
-    dispatch(refreshUser());
-  }, [dispatch]);
-  
-  if (IsRefreshing) {
-    return <Loader />
-  }
-
   return (
     <div>
       <Layout>
         <main className={css.links}>
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/feature" element={<FeaturePage />} />
+            <Route path="/blog" element={<BlogPage />} />
             <Route
-              path="/register"
-              element={<RestrictedRoute component={<RegistrationPage />} />}
+              path="/blog/:id"
+              element={<PrivateRoute component={<BlogPostPage />} />}
             />
-            <Route
-              path="/login"
-              element={<RestrictedRoute component={<LoginPage />} />}
-            />
-            <Route
-              path="/contacts"
-              element={<PrivateRoute component={<ContactsPage />} />}
-            />
+            <Route path="/testimonials" element={<TestimonialsPage />} />
+            <Route path="/register" element={<RegistrationPage />} />
+            <Route path="/login" element={<LoginPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>
