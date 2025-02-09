@@ -1,7 +1,7 @@
 import css from "./DateAndUser.module.css";
 const DateAndUser = () => {
-  const firstName = JSON.parse(localStorage.getItem("user")).firstName;
-  const lastName = JSON.parse(localStorage.getItem("user")).lastName;
+  const firstName = JSON.parse(localStorage.getItem("user"))?.firstName;
+  const lastName = JSON.parse(localStorage.getItem("user"))?.lastName;
   
   return (
     <div className={css.dateCont}>
